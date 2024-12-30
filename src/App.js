@@ -11,8 +11,8 @@ const App = () => {
     <div className="underlay">
       <div className="container">
         {/* <div className="overlay"> */}
-        <Header />
         <Nav />
+        <Header />
         <Main />
         <Footer />
       </div>
