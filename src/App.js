@@ -8,13 +8,14 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="container">
-      {/* <div className="overlay"> */}
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
-      {/* </div> */}
+    <div className="underlay">
+      <div className="container">
+        {/* <div className="overlay"> */}
+        <Header />
+        <Nav />
+        <Main />
+        <Footer />
+      </div>
     </div>
   );
 };
