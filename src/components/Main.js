@@ -9,6 +9,8 @@ const Main = () => {
     <main className="main">
       <About />
       <Work />
+      {/* <Recs /> //recs from people, changing quotes */}
+      {/* lets chat section */}
       <Contact />
     </main>
   );

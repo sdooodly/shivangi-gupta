@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about">
       <h2>About Me</h2>
-      <p>Hi! I am a marketing professional with a knack for creating impactful campaigns and strategies. Welcome to my portfolio.</p>
+      <p>I am a marketing professional dedicated to delivering comprehensive marketing solutions tailored for small-cap companies. My expertise lies in crafting impactful strategies that drive growth and visibility. I specialize in serving architectural firms, helping them build their brand and connect with the right audience.</p>
     </section>
   );
 };
