@@ -19,6 +19,7 @@
   color: rgb(0, 0, 0);
   
 }
+
 /* .overlay{
   background: linear-gradient(rgba(0, 0, 0, 0.532), rgba(255, 255, 255, 0.29));
   background-size: cover;
@@ -66,11 +67,6 @@
   margin-right: 1rem;
 }
 
-.services ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-}
-
 .architecture-image {
   flex: 1;
   text-align: center;
@@ -102,7 +98,7 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .work-item {
     flex: 1 1 calc(50% - 1rem);
   }
@@ -112,7 +108,7 @@
   .work-item {
     flex: 1 1 100%;
   }
-}
+} */
 
 .name {
   font-size: 5em;
@@ -177,7 +173,7 @@
 }
 
 .contact-form button {
-  background-color: #007BFF;
+  background-color: #bd84529e;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -187,6 +183,73 @@
 }
 
 .contact-form button:hover {
-  background-color: #0056b3;
+  background-color: #bd845286;
 }
 
+
+
+/* ?*swervices**/ */
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.service-card {
+  flex: 1 1 calc(33.333% - 1rem); /* Responsive cards: 3 per row */
+  max-width: 300px; /* Limit the max width of cards */
+  height: 200px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.service-card .card-front,
+.service-card .card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.6s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .card-front {
+  transform: rotateY(0deg);
+}
+
+.service-card .card-back {
+  transform: rotateY(180deg);
+  background-color: #bd845286;
+  color: white;
+}
+
+.service-card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.service-card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .service-card {
+    flex: 1 1 calc(50% - 1rem); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 100%; /* One card per row on small screens */
+  }
+}
