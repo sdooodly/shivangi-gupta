@@ -1,49 +1,47 @@
 import React from 'react';
+import './../Services.css'; // Import the CSS file for this component
 
 const servicesData = [
   {
     title: 'Brand Development',
-    description: 'Creating unique brand identities that resonate with target audiences.'
+    description: 'Creating unique brand identities that resonate with target audiences.',
   },
   {
     title: 'Social Media Marketing',
-    description: 'Crafting strategies to boost engagement and build a strong social presence.'
+    description: 'Crafting strategies to boost engagement and build a strong social presence.',
   },
   {
     title: 'Content Creation',
-    description: 'Producing high-quality, impactful content for various platforms.'
+    description: 'Producing high-quality, impactful content for various platforms.',
   },
   {
     title: 'Search Engine Optimization (SEO)',
-    description: 'Optimizing websites to improve visibility and rankings on search engines.'
+    description: 'Optimizing websites to improve visibility and rankings on search engines.',
   },
   {
     title: 'Campaign Management',
-    description: 'Planning and executing marketing campaigns effectively.'
+    description: 'Planning and executing marketing campaigns effectively.',
   },
   {
     title: 'Marketing Strategy Consulting',
-    description: 'Providing insights and strategies tailored to business goals.'
-  }
+    description: 'Providing insights and strategies tailored to business goals.',
+  },
 ];
 
 const Services = () => {
   return (
-    <div className="services">
-      <h3>Types of Work I Do</h3>
-      <div className="services-cards">
+    <section id="services" className="services-section">
+      <h2 className="services-title">Types of Work I Do</h2>
+      <div className="services-grid">
         {servicesData.map((service, index) => (
           <div key={index} className="service-card">
-            <div className="card-front">
-              <h4>{service.title}</h4>
-            </div>
-            <div className="card-back">
-              <p>{service.description}</p>
-            </div>
+            <h3 className="service-title">{service.title}</h3>
+            <p className="service-description">{service.description}</p>
+            <div className="service-hover-effect"></div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

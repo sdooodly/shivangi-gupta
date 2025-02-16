@@ -1,13 +1,14 @@
-// components/Header.js
 import React from 'react';
+import './Header.css'; // Import the CSS file for this component
 
 const Header = () => {
   return (
     <header className="header">
       <h1 className="name">Shivangi Gupta</h1>
-      <p>Marketing Professional | Portfolio</p>
-
-      <button className="consult-button" onClick={() => window.location.href = '#contact'}>Book a consult!!!</button>
+      <p className="tagline">Marketing Professional | Portfolio</p>
+      <button className="consult-button" onClick={() => (window.location.href = '#contact')}>
+        Book a Consult
+      </button>
     </header>
   );
 };
