@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shivangi-gupta/static/css/main.b4f6a530.css",
+    "main.css": "/shivangi-gupta/static/css/main.bdf1a81a.css",
     "main.js": "/shivangi-gupta/static/js/main.33573565.js",
     "static/js/488.c77c91e6.chunk.js": "/shivangi-gupta/static/js/488.c77c91e6.chunk.js",
     "static/media/bg-cai-fang-unsplash22.jpg": "/shivangi-gupta/static/media/bg-cai-fang-unsplash22.3e2e75f355acf1f08289.jpg",
     "index.html": "/shivangi-gupta/index.html",
-    "main.b4f6a530.css.map": "/shivangi-gupta/static/css/main.b4f6a530.css.map",
+    "main.bdf1a81a.css.map": "/shivangi-gupta/static/css/main.bdf1a81a.css.map",
     "main.33573565.js.map": "/shivangi-gupta/static/js/main.33573565.js.map",
     "488.c77c91e6.chunk.js.map": "/shivangi-gupta/static/js/488.c77c91e6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4f6a530.css",
+    "static/css/main.bdf1a81a.css",
     "static/js/main.33573565.js"
   ]
 }
