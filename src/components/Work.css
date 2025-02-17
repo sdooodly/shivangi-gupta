@@ -1,47 +1,134 @@
 /* Work.css */
 .work-section {
   padding: 4rem 2rem;
-  background: var(--secondary-dark);
-  color: var(--text-light);
-  text-align: center;
+  background: rgba(43, 34, 28, 0.9);
+  position: relative;
+  overflow: hidden;
 }
 
 .work-title {
   font-size: 2.5rem;
-  font-family: "Times New Roman", serif;
-  margin-bottom: 2rem;
-  color: var(--accent-gold);
-  text-transform: uppercase;
+  font-family: 'Times New Roman', serif;
+  color: #E6B07C;
+  text-align: center;
+  margin-bottom: 3rem;
   letter-spacing: 2px;
 }
 
-.work-gallery {
+.work-timeline {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 1rem;
 }
 
-.work-item {
-  background: var(--dark-brown);
+.work-card {
+  background: rgba(113, 72, 55, 0.7);
   border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
   position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  min-height: 200px;
+  overflow: hidden;
 }
 
-.work-item:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+.work-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.work-item h3 {
-  font-size: 1.75rem;
-  color: var(--accent-gold);
+.work-card.expanded {
+  min-height: 300px;
+  background: rgba(113, 72, 55, 0.9);
+}
+
+.company-index {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 4rem;
+  color: rgba(230, 176, 124, 0.1);
+  font-weight: bold;
+  z-index: 1;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  color: #E6B07C;
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
-.work-item p {
+.duration-pill {
+  background: #453025;
+  color: #D6B58C;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.card-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  height: 0;
+}
+
+.work-card.expanded .card-content {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.role-description {
+  color: #D6B58C;
   font-size: 1rem;
-  color: var(--light-gold);
-  opacity: 0.8;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(69, 48, 37, 0.5);
+  border-radius: 10px;
+  flex: 1;
+}
+
+.stat-number {
+  display: block;
+  color: #E6B07C;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  display: block;
+  color: #D6B58C;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .work-timeline {
+    grid-template-columns: 1fr;
+  }
+  
+  .work-card {
+    min-height: 150px;
+  }
+  
+  .work-card.expanded {
+    min-height: 250px;
+  }
 }
