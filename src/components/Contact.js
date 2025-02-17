@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import './Contact.css'; 
+import React, { useState } from "react";
+import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    phone: '',
-    description: '',
+    email: "",
+    phone: "",
+    description: "",
   });
 
   const handleChange = (e) => {
@@ -16,47 +16,22 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   
-    const payload = {
-      email: formData.email,
-      phone: formData.phone,
-      description: formData.description,
-    };
+    const mailtoLink = `mailto:chattypete96@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(
+      `Email: ${formData.email}\nPhone: ${formData.phone}\nDescription: ${formData.description}`
+    )}`;
   
-    console.log('Submitting payload:', payload); // Log the payload
-  
-    try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbz8fyCzlS795xKSbZNCnP-2oZtBLIb56FBXTWr-NK-AzclPTV16KozsaPThM-I--K_w_w/execRL', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-  
-      console.log('Response status:', response.status); // response status
-  
-      if (response.ok) {
-        alert('Thank you for reaching out! Your message has been submitted.');
-        setFormData({ email: '', phone: '', description: '' });
-      } else {
-        const errorData = await response.json();
-        console.error('Error response:', errorData); // error response
-        alert('Something went wrong. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error); // Log the error
-      alert('An error occurred. Please try again.');
-    }
+    window.location.href = mailtoLink; // Opens the user's email client
+    setFormData({ email: "", phone: "", description: "" }); // Clear form
   };
 
   return (
     <section id="contact" className="contact-section">
       <h2 className="contact-title">Contact</h2>
       <p className="contact-description">
-        Feel free to reach out via email at{' '}
+        Feel free to reach out via email at{" "}
         <a href="mailto:shivangi@example.com" className="contact-email">
           shivangi@example.com
         </a>
@@ -64,7 +39,7 @@ const Contact = () => {
       </p>
       <form onSubmit={handleSubmit} className="contact-form">
         <label className="form-label">
-          Email (optional):
+          Email:
           <input
             type="email"
             name="email"
@@ -86,13 +61,14 @@ const Contact = () => {
           />
         </label>
         <label className="form-label">
-          Description of Issue (optional):
-          <textarea
+          Description of Issue:
+          <input
+            type="description"
             name="description"
             value={formData.description}
             onChange={handleChange}
-            placeholder="Describe your issue or query"
-            className="form-textarea"
+            placeholder="Describe your query"
+            className="form-input"
           />
         </label>
         <button type="submit" className="form-button">
@@ -104,5 +80,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-//https://script.google.com/macros/s/AKfycbz8fyCzlS795xKSbZNCnP-2oZtBLIb56FBXTWr-NK-AzclPTV16KozsaPThM-I--K_w_w/exec
