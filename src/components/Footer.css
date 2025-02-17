@@ -1,0 +1,25 @@
+/* Footer.css */
+.footer {
+  padding: 2rem 1rem;
+  background: rgba(43, 34, 28, 0.8); 
+  color: var(--light-gold);
+  text-align: center;
+  border-top: 1px solid var(--light-brown);
+  backdrop-filter: blur(5px); 
+}
+
+.footer p {
+  font-size: 0.875rem; 
+  margin: 0;
+  opacity: 0.9;
+}
+
+.footer a {
+  color: var(--accent-gold); 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--light-gold); 
+}

@@ -1,12 +1,12 @@
-/* Work.css */
-.work-section {
+/* Services.css */
+.services-section {
   padding: 4rem 2rem;
-  background: var(--secondary-dark);
-  color: var(--text-light);
   text-align: center;
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
 }
 
-.work-title {
+.services-title {
   font-size: 2.5rem;
   font-family: "Times New Roman", serif;
   margin-bottom: 2rem;
@@ -15,32 +15,35 @@
   letter-spacing: 2px;
 }
 
-.work-gallery {
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 1rem;
 }
 
-.work-item {
-  background: var(--dark-brown);
-  border-radius: 15px;
+.service-card {
+  background: rgba(43, 34, 28, 0.8); /* Semi-transparent dark brown */
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  backdrop-filter: blur(5px); /* Blur effect for premium look */
 }
 
-.work-item:hover {
+.service-card:hover {
+  transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-.work-item h3 {
+.service-title {
   font-size: 1.75rem;
   color: var(--accent-gold);
   margin-bottom: 1rem;
 }
 
-.work-item p {
+.service-description {
   font-size: 1rem;
   color: var(--light-gold);
   opacity: 0.8;

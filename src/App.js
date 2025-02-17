@@ -1,32 +1,25 @@
-// Import necessary React modules
 import React from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Main from './components/Main';
+import About from './components/About';
+import Work from './components/Work';
+import Services from './components/Services';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <div className="underlay">
-      <div className="container">
-        {/* <div className="overlay"> */}
-        <Nav />
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+    <div className="App">
+      <Header />
+      <Nav />
+      <About />
+      <Work />
+      <Services />
+      <Contact />
+      <Footer />
     </div>
   );
-};
+}
 
 export default App;
-
-
-
-
-
-
-
-
-

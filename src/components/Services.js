@@ -1,5 +1,5 @@
 import React from 'react';
-import './../Services.css'; // Import the CSS file for this component
+import './Services.css'; // Import the CSS file for this component
 
 const servicesData = [
   {
@@ -31,7 +31,7 @@ const servicesData = [
 const Services = () => {
   return (
     <section id="services" className="services-section">
-      <h2 className="services-title">Types of Work I Do</h2>
+      <h2 className="services-title">Testtt heading?</h2>
       <div className="services-grid">
         {servicesData.map((service, index) => (
           <div key={index} className="service-card">

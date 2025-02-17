@@ -1,6 +1,6 @@
 import React from 'react';
 import Services from './Services';
-import './About.css'; // Import the CSS file for this component
+import './About.css'; 
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <Services />
+     
     </section>
   );
 };

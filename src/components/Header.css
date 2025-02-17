@@ -1,83 +1,59 @@
-/* Header Section Styles */
+/* Header.css */
 .header {
-    padding: 4rem 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./../extras/samson-ZGjbiukp_-A-unsplash.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  padding: 4rem 2rem;
+  background: var(--primary-dark);
+  color: var(--text-light);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.name {
+  font-size: 4.5rem;
+  font-family: "Times New Roman", serif;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: var(--light-gold);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.consult-button {
+  padding: 1rem 2rem;
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 4s ease-in-out;
+}
+
+.consult-button:hover {
+  background: var(--light-gold);
+  transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .name {
-    font-size: 4.5rem;
-    font-family: "Times New Roman", serif;
-    color: #d9aa43;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 1rem;
-    animation: fadeIn 2s ease-in-out;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .tagline {
-    font-size: 1.5rem;
-    color: #fff;
-    opacity: 0.9;
-    margin-bottom: 2rem;
-    animation: fadeIn 3s ease-in-out;
-  }
-  
-  .consult-button {
-    padding: 1rem 2rem;
-    background: #d9aa43;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-    animation: fadeIn 4s ease-in-out;
-  }
-  
-  .consult-button:hover {
-    background: #bd8452;
-    transform: translateY(-5px);
-  }
-  
-  /* Keyframes for Fade-In Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .header {
-      padding: 2rem 1rem;
-    }
-  
-    .name {
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
-  
-    .tagline {
-      font-size: 1.25rem;
-    }
-  
-    .consult-button {
-      padding: 0.75rem 1.5rem;
-      font-size: 0.875rem;
-    }
-  }
+}
