@@ -31,9 +31,9 @@ const servicesData = [
 const Services = () => {
   return (
     <section id="services" className="services-section">
-      <div className="services-container"> {/* Container for centering and width control */}
-        <h2 className="services-title">Our Services</h2>
-        <p className="services-subtitle">Elevate your brand with our comprehensive marketing solutions.</p> {/* Subtitle added */}
+      <div className="services-container"> {/* Container for centeringl */}
+        <h2 className="services-title">Services</h2>
+        <p className="services-subtitle">Elevate your brand with comprehensive marketing solutions!</p> {/* Subtitle added */}
         <div className="services-grid">
           {servicesData.map((service, index) => (
             <div key={index} className="service-card">

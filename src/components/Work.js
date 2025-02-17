@@ -30,7 +30,7 @@ const Work = () => {
 
   return (
     <section id="work" className="work-section">
-      <h2 className="work-title">Professional Journey</h2>
+      <h2 className="work-title">WORK I'VE DONE?</h2>
       
       <div className="work-timeline">
         {companies.map((company, index) => (
