@@ -11,8 +11,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Nav />
+      <Header />
       <About />
       <Work />
       <Services />

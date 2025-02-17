@@ -5,6 +5,7 @@ body {
   background: url('./extras/bg-cai-fang-unsplash22.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;
+  overflow-x: hidden; /* Prevents horizontal scrolling*/
 }
 
 /* Overlay to darken the background */

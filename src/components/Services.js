@@ -1,45 +1,50 @@
 import React from 'react';
-import './Services.css'; // Import the CSS file for this component
+import './Services.css';
 
 const servicesData = [
   {
     title: 'Brand Development',
-    description: 'Creating unique brand identities that resonate with target audiences.',
+    description: 'Crafting unique brand identities that resonate with your target audience.',
   },
   {
     title: 'Social Media Marketing',
-    description: 'Crafting strategies to boost engagement and build a strong social presence.',
+    description: 'Building a strong social presence and boosting engagement through strategic campaigns.',
   },
   {
     title: 'Content Creation',
-    description: 'Producing high-quality, impactful content for various platforms.',
+    description: 'Producing high-quality, impactful content tailored for various platforms.',
   },
   {
     title: 'Search Engine Optimization (SEO)',
-    description: 'Optimizing websites to improve visibility and rankings on search engines.',
+    description: 'Enhancing website visibility and rankings on search engines for increased organic traffic.',
   },
   {
     title: 'Campaign Management',
-    description: 'Planning and executing marketing campaigns effectively.',
+    description: 'Planning and executing effective marketing campaigns to achieve your business goals.',
   },
   {
     title: 'Marketing Strategy Consulting',
-    description: 'Providing insights and strategies tailored to business goals.',
+    description: 'Providing expert insights and tailored strategies to drive business growth.',
   },
 ];
 
 const Services = () => {
   return (
     <section id="services" className="services-section">
-      <h2 className="services-title">Testtt heading?</h2>
-      <div className="services-grid">
-        {servicesData.map((service, index) => (
-          <div key={index} className="service-card">
-            <h3 className="service-title">{service.title}</h3>
-            <p className="service-description">{service.description}</p>
-            <div className="service-hover-effect"></div>
-          </div>
-        ))}
+      <div className="services-container"> {/* Container for centering and width control */}
+        <h2 className="services-title">Our Services</h2>
+        <p className="services-subtitle">Elevate your brand with our comprehensive marketing solutions.</p> {/* Subtitle added */}
+        <div className="services-grid">
+          {servicesData.map((service, index) => (
+            <div key={index} className="service-card">
+              <div className="service-content"> {/* Content wrapper for better hover effect */}
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+              </div>
+              <div className="service-overlay"></div> {/* Overlay for hover effect */}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
